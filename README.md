@@ -6,7 +6,7 @@ This repository is unofficial implementation of Few-shot adversarial domain adap
 Though [1] treats digit recognition task and office dataset task, we applied the algorythm to office-home dataset which has more number of classes.  
 
 ## usage
-1. Put office-home dataset under the dataset directory. Dataset should be structured like
+1. Make `dataset` directory, and put the office-home dataset under it. Dataset should be structured like
 ```
 dataset  
 |  
@@ -21,7 +21,6 @@ L- Product
 ```
 2. run   
 ```
-mkdir dataset
 mkdir result
 mkdir csv
 bash script.sh
