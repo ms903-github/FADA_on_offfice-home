@@ -1,0 +1,56 @@
+model: "googlenet"
+class_weight: False
+batch_size: 128
+
+width: 224
+height: 224
+
+num_workers: 2
+n_classes: 65
+n_metaclass: 11
+optimizer_gh: "Adam"
+optimizer_DCD: "Adam"
+
+lr_gh: 0.001
+lr_DCD: 0.001
+lr_mDCD: 0.001
+lr_mgh: 0.0001
+scheduler: False
+
+alpha: 1
+beta: 1
+gamma: 0.3
+num_k: 2
+
+#if True, require_grad in step1 will be only activated on last layer
+reqg_init_lastonly: True
+
+reqg_head: False
+reqg_last: True
+
+#require_grad for resnet
+reqg_layer1: False
+reqg_layer2: False
+reqg_layer3: False
+reqg_layer4: False
+
+#require_grad for googlenet
+reqg_i3: False
+reqg_i4: False
+reqg_i5: False
+
+DCD_h_activate: False
+DCD_m_activate: False
+DCD_l_activate: True
+
+metric: adacos
+MCD: False
+dist_align: False
+dist_method: "l1_ave"
+
+
+num_ep_init: 50
+num_ep_DCD: 50
+num_ep_train: 100
+
+result_path: ./result/cfg1
